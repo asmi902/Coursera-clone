@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f9f0;
+    }
+
+    .login-form {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      padding-right: 53px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      max-width: 100%;
+      text-align: left;
+    }
+
+    .form-control {
+      margin-bottom: 20px;
+    }
+
+    .form-control label {
+      display: block;
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .form-control input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+
+    .form-control input:focus {
+      outline: none;
+      border-color: #e74c3c;
+    }
+    .form-control input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px #ecd5d3 inset;
+    }
+
+    .btn {
+      background-color: #e74c3c;
+      color: #ffffff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #c0392b;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #e74c3c;
+    }
+
+    .form-message {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333333;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="login-form" onsubmit="showSuccessMessage()">
+    <h2>Login</h2>
+    <div class="form-control">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-control">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Login</button>
+  </form>
+
+  <script>
+    function showSuccessMessage() {
+      // Prevent the form from submitting
+      event.preventDefault();
+      
+      // Show success message using a dialog box
+      alert("Login successful!");
+      
+      // Optionally, you can redirect to another page after showing the message
+      // window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      min-height: 100vh;
+      background-color: #f0f9f0;
+    }
+
+    .signup-form {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      padding-right: 53px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      max-width: 100%;
+      text-align:left;
+    }
+
+    .form-control {
+      margin-bottom: 20px;
+    }
+
+    .form-control label {
+      display: block;
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .form-control input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+
+    .form-control input:focus {
+      outline: none;
+      border-color: #e74c3c;
+    }
+    .form-control input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #ecd5d3 inset; /* Change the inset box-shadow color to match your desired color */
+}
+
+    .btn {
+      background-color: #e74c3c; /* Changed color to red */
+      color: #ffffff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #c0392b; /* Darker shade of red on hover */
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #e74c3c;
+    }
+
+    .form-message {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333333;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="signup-form" action="signup.php" onsubmit="return validateForm()" method="POST">
+    <h2>Sign Up</h2>
+    <div class="form-control">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+    </div>
+    <div class="form-control">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div class="form-control">
+      <label for="contact">Contact</label>
+      <input type="tel" id="contact" name="contact">
+    </div>
+    <div class="form-control">
+      <label for="field">Field of Study</label>
+      <input type="text" id="field" name="field">
+    </div>
+    <div class="form-control">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password">
+    </div>
+
+    <button type="submit" class="btn">Sign Up</button>
+    <div class="form-message" id="form-message"></div>
+  </form>
+
+  <script>
+    function validateForm() {
+      var email = document.getElementById("email").value;
+      var contact = document.getElementById("contact").value;
+      var password = document.getElementById("password").value;
+
+      // Validate email format
+      var emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+      if (!emailRegex.test(email)) {
+        showMessage("Please enter a valid email address.");
+        return false;
+      }
+
+      // Validate contact number format
+      var contactRegex = /^[0-9]{10}$/;
+      if (!contactRegex.test(contact)) {
+        showMessage("Please enter a 10-digit contact number.");
+        return false;
+      }
+
+      // Validate password format
+      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        showMessage("Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number.");
+        return false;
+      }
+
+      showMessage("Sign up successful!", "success");
+      return true;
+    }
+
+    function showMessage(message, type = "error") {
+      var formMessage = document.getElementById("form-message");
+      formMessage.textContent = message;
+      formMessage.style.color = type === "success" ? "#2ecc71" : "#e74c3c";
+    }
+  </script>
+
+</body>
+
+</html>

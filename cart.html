@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e0f2e9; /* Light green background color */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .cart-info {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .course {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      padding-left: 20px; /* Added left padding */
+    }
+
+    .course:last-child {
+      border-bottom: none; /* Remove border from last course item */
+    }
+
+    .course-title {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .course-description {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .course-amount {
+      color: #333;
+      font-size: 16px;
+    }
+
+    .buy-now {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-now:hover {
+      background-color: #45a049;
+    }
+
+    .close-cart {
+      background-color: #f44336;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .close-cart:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="cart-info" id="cart-info">
+      <div class="course">
+        <h3 class="course-title">Build Responsive Real-World Websites with HTML and CSS</h3>
+        <p class="course-description">Learn to create modern, responsive websites using HTML and CSS. This course covers key concepts such as flexbox, grid layout, and responsive design principles.</p>
+        <p class="course-amount">₹2400</p>
+        <button class="buy-now" onclick="buyNow()">Buy Now</button>
+      </div>
+      <div class="course">
+        <h3 class="course-title">The Complete Camtasia Course for Content Creators</h3>
+        <p class="course-description">Master the art of creating engaging video content with Camtasia. This comprehensive course covers everything from video editing basics to advanced techniques for content creators.</p>
+        <p class="course-amount">₹3000</p>
+        <button class="buy-now" onclick="buyNow()">Buy Now</button>
+      </div>
+      <div class="course">
+        <h3 class="course-title">JavaScript Fundamentals</h3>
+        <p class="course-description">Learn the fundamentals of JavaScript programming language. This course covers basic syntax, data types, control structures, functions, and more.</p>
+        <p class="course-amount">₹4500</p>
+        <button class="buy-now" onclick="buyNow()">Buy Now</button>
+      </div>
+      <div class="course">
+        <h3 class="course-title">Python for Data Science</h3>
+        <p class="course-description">Master Python programming language for data science and machine learning. This course covers data manipulation, visualization, and analysis using Python libraries such as NumPy, pandas, and Matplotlib.</p>
+        <p class="course-amount">₹5000</p>
+        <button class="buy-now" onclick="buyNow()">Buy Now</button>
+      </div>
+      <button class="close-cart" onclick="closeCart()">Close Cart</button>
+    </div>
+  </div>
+
+  <script>
+    function closeCart() {
+      window.location.href = 'index.html'; // Redirect to the home page
+    }
+
+  </script>
+</body>
+
+</html>

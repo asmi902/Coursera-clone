@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course 1 Details</title>
+  <style>
+    /* Add your CSS styles here */
+    :root {
+      --selective-yellow: hsl(42, 94%, 55%);
+      --eerie-black-1: hsl(0, 0%, 9%);
+      --eerie-black-2: hsl(180, 3%, 7%);
+      --quick-silver: hsl(0, 0%, 65%);
+      --radical-red: hsl(351, 83%, 61%);
+      --light-gray: hsl(0, 0%, 80%);
+      --isabelline: hsl(36, 33%, 94%);
+      --gray-x-11: hsl(0, 0%, 73%);
+      --kappel_15: hsla(170, 75%, 41%, 0.15);
+      --platinum: hsl(0, 0%, 90%);
+      --gray-web: hsl(0, 0%, 50%);
+      --black_80: hsla(0, 0%, 0%, 0.8);
+      --white_50: hsla(0, 0%, 100%, 0.5);
+      --black_50: hsla(0, 0%, 0%, 0.5);
+      --black_30: hsla(0, 0%, 0%, 0.3);
+      --kappel: hsl(170, 75%, 41%);
+      --white: hsl(0, 0%, 100%);
+      --gradient: linear-gradient(-90deg, hsl(151, 58%, 46%) 0%, hsl(170, 75%, 41%) 100%);
+      --ff-league_spartan: 'League Spartan', sans-serif;
+      --ff-poppins: 'Poppins', sans-serif;
+      --fs-1: 4.2rem;
+      --fs-2: 3.2rem;
+      --fs-3: 2.3rem;
+      --fs-4: 1.8rem;
+      --fs-5: 1.5rem;
+      --fs-6: 1.4rem;
+      --fs-7: 1.3rem;
+      --fw-500: 500;
+      --fw-600: 600;
+      --section-padding: 75px;
+      --shadow-1: 0 6px 15px 0 hsla(0, 0%, 0%, 0.05);
+      --shadow-2: 0 10px 30px hsla(0, 0%, 0%, 0.06);
+      --shadow-3: 0 10px 50px 0 hsla(220, 53%, 22%, 0.1);
+      --radius-pill: 500px;
+      --radius-circle: 50%;
+      --radius-3: 3px;
+      --radius-5: 5px;
+      --radius-10: 10px;
+      --transition-1: 0.25s ease;
+      --transition-2: 0.5s ease;
+      --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+      --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+    }
+
+    body {
+      font-family: var(--ff-poppins);
+      background-color: var(--isabelline);
+      color: var(--eerie-black-1);
+      padding: var(--section-padding);
+    }
+ body {
+      font-family: Arial, sans-serif;
+      background-color: hsl(120, 50%, 95%);
+      color: #333;
+      padding: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    h1 {
+      font-size: var(--fs-2);
+      font-weight: var(--fw-600);
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius-3);
+      transition: var(--transition-1);
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--selective-yellow);
+      box-shadow: 0 0 0 2px var(--selective-yellow);
+    }
+
+    button[type="submit"] {
+      background-color: var(--radical-red);
+      color: var(--white);
+      padding: 15px 30px;
+      border: none;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: var(--transition-1);
+    }
+
+    button[type="submit"]:hover {
+      background-color: hsl(351, 83%, 50%);
+    }
+  </style>
+</head>
+<body>
+  <h1>Course 1 Details</h1>
+ <form id="course1-form">
+    <label for="course-name">Course Name:</label>
+    <input type="text" id="course-name" name="course-name" value="Build Responsive Real- World Websites with HTML and CSS" required><br><br>
+
+    <label for="instructor-name">Instructor Name:</label>
+    <input type="text" id="instructor-name" name="instructor-name" value="Asmi Parikh" required><br><br>
+
+    <label for="course-details">Course Details:</label>
+    <textarea id="course-details" name="course-details" rows="4" cols="50" readonly>Build Responsive Real-World Websites with HTML and CSS is a comprehensive guide that teaches web development enthusiasts how to create modern, responsive websites using HTML and CSS. The course covers essential topics such as layout design, styling techniques, and responsiveness principles to ensure websites look great and function seamlessly across various devices and screen sizes. With practical examples and hands-on exercises, learners gain the skills needed to design and build professional websites that meet today's standards.</textarea><br><br>
+
+    <label for="course-price">Course Price:</label>
+    <input type="text" id="course-price" name="course-price" value="2400.00" readonly><br><br>
+
+    <label for="course-gst">GST (10%):</label>
+    <input type="text" id="course-gst" name="course-gst" value="240.00" readonly><br><br>
+
+    <button type="submit">Add to Cart</button>
+</form>
+  </form>
+
+  <script>
+    document.getElementById("course1-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var courseName = document.getElementById("course-name").value;
+      var instructorName = document.getElementById("instructor-name").value;
+      var totalPrice = parseFloat(document.getElementById("course-price").value) + parseFloat(document.getElementById("course-gst").value);
+      var confirmMsg = confirm("Do you want to add \"" + courseName + "\" by " + instructorName + " to your cart for ₹" + totalPrice.toFixed(2) + "?");
+      if (confirmMsg) {
+        // Here you can add the course to the cart
+        alert("Course added to cart!");
+      }
+    });
+  </script>
+</body>
+</html>
